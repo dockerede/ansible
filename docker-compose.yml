@@ -1,0 +1,26 @@
+version: "3.3"
+
+
+services:
+
+    host1:
+      image: centos7systemd
+      build:
+        context: ./centos7systemd
+
+    host2:
+      image: centos7systemd
+              
+    host3:
+      image: centos7systemd
+              
+    host4:
+      image: centos7systemd
+    
+    ansible:
+      image: ansible          
+      build:
+        context: ./ansible-centos7
+      command: tail -f /dev/null 
+      volumes:
+        - ./ansible:/etc/ansible
