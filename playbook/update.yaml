@@ -1,0 +1,12 @@
+- name: "Job update"
+
+  hosts: all
+
+ 
+
+  tasks:
+
+  - name: "httpd"
+
+    yum: pkg=httpd state=latest
+
